@@ -26,11 +26,18 @@ class UsersScreen extends StatelessWidget {
           Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text("1",
+              Text("SACI Zakaria",
                   style: TextStyle(
                       fontSize: 25,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold))
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
+              ),
+              Text("06.95.06.54.54 ",
+                style: TextStyle(
+                    fontSize: 15,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold),
+              )
             ],
           ),
         ],
