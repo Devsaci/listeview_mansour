@@ -36,20 +36,11 @@ class UsersScreen extends StatelessWidget {
       id: 3,
     ),
     UserModel(
-      phone: '44.44.',
-      name: 'SACI Zakaria 4',
-      id: 4,
+      phone: '11.11.11',
+      name: 'SACI Zakaria 1',
+      id: 1,
     ),
     UserModel(
-      phone: '55.55.',
-      name: 'SACI Zakaria 4',
-      id: 4,
-    ),
-    UserModel(
-      phone: '55.55',
-      name: 'SACI Zakaria 5',
-      id: 5,
-    ),  UserModel(
       phone: '22.22.22.',
       name: 'SACI Zakaria 2',
       id: 2,
@@ -60,20 +51,11 @@ class UsersScreen extends StatelessWidget {
       id: 3,
     ),
     UserModel(
-      phone: '44.44.',
-      name: 'SACI Zakaria 4',
-      id: 4,
+      phone: '11.11.11',
+      name: 'SACI Zakaria 1',
+      id: 1,
     ),
     UserModel(
-      phone: '55.55.',
-      name: 'SACI Zakaria 4',
-      id: 4,
-    ),
-    UserModel(
-      phone: '55.55',
-      name: 'SACI Zakaria 5',
-      id: 5,
-    ),  UserModel(
       phone: '22.22.22.',
       name: 'SACI Zakaria 2',
       id: 2,
@@ -82,21 +64,6 @@ class UsersScreen extends StatelessWidget {
       phone: '33.33.3..',
       name: 'SACI Zakaria 3',
       id: 3,
-    ),
-    UserModel(
-      phone: '44.44.',
-      name: 'SACI Zakaria 4',
-      id: 4,
-    ),
-    UserModel(
-      phone: '55.55.',
-      name: 'SACI Zakaria 4',
-      id: 4,
-    ),
-    UserModel(
-      phone: '55.55',
-      name: 'SACI Zakaria 5',
-      id: 5,
     ),
   ];
 
@@ -127,7 +94,7 @@ class UsersScreen extends StatelessWidget {
           children: [
             CircleAvatar(
                 radius: 25,
-                child: Text("1",
+                child: Text('${users.id}',
                     style: TextStyle(
                         fontSize: 25,
                         color: Colors.white,
@@ -138,14 +105,14 @@ class UsersScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "SACI Zakaria",
+                  users.name,
                   style: TextStyle(
                       fontSize: 25,
                       color: Colors.black,
                       fontWeight: FontWeight.bold),
                 ),
                 Text(
-                  "06.95.06.54.54 ",
+                  users.phone,
                   style: TextStyle(
                       fontSize: 15,
                       color: Colors.black,
