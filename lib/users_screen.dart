@@ -10,21 +10,22 @@ class UserModel {
   final String phone;
 
   UserModel({
-    this.id,
-    this.name,
-    this.phone
+    @required this.id,
+    @required this.name,
+    @required this.phone,
   });
 }
 
 class UsersScreen extends StatelessWidget {
-
   UsersScreen({Key key}) : super(key: key);
 
-  List<UserModel> usrs = [
-
-
+  List<UserModel> users = [
+    UserModel(
+      phone: '06.95.06.54.55',
+      name: 'SACI Zakaria',
+      id: 1,
+    )
   ];
-
 
   @override
   Widget build(BuildContext context) {
