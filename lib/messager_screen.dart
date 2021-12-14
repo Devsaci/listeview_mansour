@@ -848,6 +848,8 @@ class MessengerScreen extends StatelessWidget {
   }
 
   // 1. build Item
+
+  // arrow function
   Widget buildChatItem() {
     return Row(
       children: [
