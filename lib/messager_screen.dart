@@ -94,11 +94,13 @@ class MessengerScreen extends StatelessWidget {
             ),
           ),
           SizedBox(height: 20.0),
-          ListView.separated(
-            scrollDirection: Axis.vertical,
-            itemBuilder: (contextList, index) => buildChatItem(),
-            separatorBuilder: (contextList, index) => SizedBox(height: 5.0),
-            itemCount: 15,
+          Expanded(
+            child: ListView.separated(
+              scrollDirection: Axis.vertical,
+              itemBuilder: (contextList, index) => buildChatItem(),
+              separatorBuilder: (contextList, index) => SizedBox(height: 5.0),
+              itemCount: 15,
+            ),
           ),
         ]),
       ),
