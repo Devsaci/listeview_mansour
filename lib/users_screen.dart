@@ -21,10 +21,83 @@ class UsersScreen extends StatelessWidget {
 
   List<UserModel> users = [
     UserModel(
-      phone: '06.95.06.54.55',
-      name: 'SACI Zakaria',
+      phone: '11.11.11',
+      name: 'SACI Zakaria 1',
       id: 1,
-    )
+    ),
+    UserModel(
+      phone: '22.22.22.',
+      name: 'SACI Zakaria 2',
+      id: 2,
+    ),
+    UserModel(
+      phone: '33.33.3..',
+      name: 'SACI Zakaria 3',
+      id: 3,
+    ),
+    UserModel(
+      phone: '44.44.',
+      name: 'SACI Zakaria 4',
+      id: 4,
+    ),
+    UserModel(
+      phone: '55.55.',
+      name: 'SACI Zakaria 4',
+      id: 4,
+    ),
+    UserModel(
+      phone: '55.55',
+      name: 'SACI Zakaria 5',
+      id: 5,
+    ),  UserModel(
+      phone: '22.22.22.',
+      name: 'SACI Zakaria 2',
+      id: 2,
+    ),
+    UserModel(
+      phone: '33.33.3..',
+      name: 'SACI Zakaria 3',
+      id: 3,
+    ),
+    UserModel(
+      phone: '44.44.',
+      name: 'SACI Zakaria 4',
+      id: 4,
+    ),
+    UserModel(
+      phone: '55.55.',
+      name: 'SACI Zakaria 4',
+      id: 4,
+    ),
+    UserModel(
+      phone: '55.55',
+      name: 'SACI Zakaria 5',
+      id: 5,
+    ),  UserModel(
+      phone: '22.22.22.',
+      name: 'SACI Zakaria 2',
+      id: 2,
+    ),
+    UserModel(
+      phone: '33.33.3..',
+      name: 'SACI Zakaria 3',
+      id: 3,
+    ),
+    UserModel(
+      phone: '44.44.',
+      name: 'SACI Zakaria 4',
+      id: 4,
+    ),
+    UserModel(
+      phone: '55.55.',
+      name: 'SACI Zakaria 4',
+      id: 4,
+    ),
+    UserModel(
+      phone: '55.55',
+      name: 'SACI Zakaria 5',
+      id: 5,
+    ),
   ];
 
   @override
@@ -34,7 +107,7 @@ class UsersScreen extends StatelessWidget {
         title: Text("Users"),
       ),
       body: ListView.separated(
-          itemBuilder: (context, index) => buildUserItem(),
+          itemBuilder: (context, index) => buildUserItem(users[index]),
           separatorBuilder: (context, index) => Padding(
                 padding: const EdgeInsetsDirectional.only(start: 20.0),
                 child: Container(
@@ -43,11 +116,12 @@ class UsersScreen extends StatelessWidget {
                   color: Colors.grey[800],
                 ),
               ),
-          itemCount: 10),
+          itemCount: users.length,
+      ),
     );
   }
 
-  Widget buildUserItem() => Padding(
+  Widget buildUserItem(UserModel users) => Padding(
         padding: const EdgeInsets.all(20.0),
         child: Row(
           children: [
