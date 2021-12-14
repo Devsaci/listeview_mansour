@@ -13,34 +13,38 @@ class UsersScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("Users"),
       ),
-      body: Row(
-        children: [
-          CircleAvatar(
-              radius: 25,
-              child: Text("1",
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Row(
+          children: [
+            CircleAvatar(
+                radius: 25,
+                child: Text("1",
+                    style: TextStyle(
+                        fontSize: 25,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold))),
+            SizedBox(width: 20),
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("SACI Zakaria",
+                    style: TextStyle(
+                        fontSize: 25,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold),
+                ),
+                Text("06.95.06.54.54 ",
                   style: TextStyle(
-                      fontSize: 25,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold))),
-          SizedBox(width: 20),
-          Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text("SACI Zakaria",
-                  style: TextStyle(
-                      fontSize: 25,
+                      fontSize: 15,
                       color: Colors.black,
                       fontWeight: FontWeight.bold),
-              ),
-              Text("06.95.06.54.54 ",
-                style: TextStyle(
-                    fontSize: 15,
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold),
-              )
-            ],
-          ),
-        ],
+                )
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
