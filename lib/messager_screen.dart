@@ -90,6 +90,7 @@ class MessengerScreen extends StatelessWidget {
               Container(
                 height: 100.0,
                 child: ListView.separated(
+                  shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (contextList, index) => buildStoryItem(),
                   separatorBuilder: (contextList, index) => SizedBox(width: 5.0),
