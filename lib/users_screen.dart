@@ -1,9 +1,13 @@
 // ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_literals_to_create_immutables, prefer_const_constructors
 import 'dart:ui';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+
+
+class UserModel{
+
+}
 
 class UsersScreen extends StatelessWidget {
   UsersScreen({Key key}) : super(key: key);
