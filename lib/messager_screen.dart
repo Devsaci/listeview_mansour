@@ -853,94 +853,131 @@ class MessengerScreen extends StatelessWidget {
 
   // arrow function
   Widget buildChatItem() => Row(
-    children: [
-      Stack(
-        alignment: AlignmentDirectional.bottomEnd,
         children: [
-          CircleAvatar(
-            radius: 30,
-            backgroundImage: NetworkImage(
-                "https://avatars.githubusercontent.com/u/46720185?s=400&u=1448d38406436f4c8ababbe8811bd691e9488489&v=4"),
+          Stack(
+            alignment: AlignmentDirectional.bottomEnd,
+            children: [
+              CircleAvatar(
+                radius: 30,
+                backgroundImage: NetworkImage(
+                    "https://avatars.githubusercontent.com/u/46720185?s=400&u=1448d38406436f4c8ababbe8811bd691e9488489&v=4"),
+              ),
+              Padding(
+                padding: const EdgeInsetsDirectional.only(
+                  bottom: 3,
+                  end: 3,
+                ),
+                child: CircleAvatar(
+                  radius: 7,
+                  backgroundColor: Colors.redAccent,
+                ),
+              ),
+            ],
           ),
-          Padding(
-            padding: const EdgeInsetsDirectional.only(
-              bottom: 3,
-              end: 3,
-            ),
-            child: CircleAvatar(
-              radius: 7,
-              backgroundColor: Colors.redAccent,
+          SizedBox(
+            width: 10,
+          ),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "SACI Zakaria",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 10,
+                  ),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Text(
+                        "Message Message Message Message",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 15,
+                        ),
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 3.0, vertical: 3.0),
+                          child: Container(
+                            height: 3.0,
+                            width: 3.0,
+                            decoration: BoxDecoration(
+                              color: Colors.black,
+                              shape: BoxShape.circle,
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 3.0, vertical: 3.0),
+                          child: Container(
+                            height: 3.0,
+                            width: 3.0,
+                            decoration: BoxDecoration(
+                              color: Colors.black,
+                              shape: BoxShape.circle,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Text("12 : 00 PM"),
+                  ],
+                ),
+              ],
             ),
           ),
         ],
-      ),
-      SizedBox(
-        width: 10,
-      ),
-      Expanded(
+      ); //Item Horizontal
+  Widget buildStoryItem() => Container(
+        width: 60,
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Stack(
+              alignment: AlignmentDirectional.bottomEnd,
+              children: [
+                CircleAvatar(
+                  radius: 30,
+                  backgroundImage: NetworkImage(
+                      "https://avatars.githubusercontent.com/u/46720185?s=400&u=1448d38406436f4c8ababbe8811bd691e9488489&v=4"),
+                ),
+                Padding(
+                  padding: const EdgeInsetsDirectional.only(
+                    bottom: 3,
+                    end: 3,
+                  ),
+                  child: CircleAvatar(
+                    radius: 7,
+                    backgroundColor: Colors.redAccent,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 6.0),
             Text(
-              "SACI Zakaria",
+              "SACI Zakaria SACI Zakaria",
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 10,
               ),
-              maxLines: 1,
+              maxLines: 2,
               overflow: TextOverflow.ellipsis,
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Row(
-              children: [
-                Expanded(
-                  child: Text(
-                    "Message Message Message Message",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 15,
-                    ),
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ),
-                Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 3.0, vertical: 3.0),
-                      child: Container(
-                        height: 3.0,
-                        width: 3.0,
-                        decoration: BoxDecoration(
-                          color: Colors.black,
-                          shape: BoxShape.circle,
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 3.0, vertical: 3.0),
-                      child: Container(
-                        height: 3.0,
-                        width: 3.0,
-                        decoration: BoxDecoration(
-                          color: Colors.black,
-                          shape: BoxShape.circle,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Text("12 : 00 PM"),
-              ],
             ),
           ],
         ),
-      ),
-    ],
-  );
+      ); //Item Vertical
 
 }
