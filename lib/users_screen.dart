@@ -1,6 +1,4 @@
 // ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_literals_to_create_immutables, prefer_const_constructors
-
-import 'dart:html';
 import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
@@ -18,10 +16,23 @@ class UsersScreen extends StatelessWidget {
       body: Row(
         children: [
           CircleAvatar(
-            radius: 25,
-            child: Text("1", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),),
+              radius: 25,
+              child: Text("1",
+                  style: TextStyle(
+                      fontSize: 25,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold))),
+          SizedBox(width: 20),
+          Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text("1",
+                  style: TextStyle(
+                      fontSize: 25,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold))
+            ],
           ),
-
         ],
       ),
     );
