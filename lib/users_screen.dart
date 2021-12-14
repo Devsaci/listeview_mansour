@@ -3,6 +3,7 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 
 class UsersScreen extends StatelessWidget {
   UsersScreen({Key key}) : super(key: key);
@@ -13,7 +14,18 @@ class UsersScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("Users"),
       ),
-      body: null,
+      body: ListView.separated(
+          itemBuilder: (context, index) => buildUserItem () ,
+          separatorBuilder:  (context, index) => Padding(
+            padding: const EdgeInsetsDirectional.only(start: 20.0),
+            child: Container(
+              width: double.infinity,
+              height: 1.5,
+              color: Colors.grey[800],
+
+            ),
+          ) ,
+          itemCount: 10),
     );
   }
 
