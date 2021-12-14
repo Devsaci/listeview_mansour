@@ -17,7 +17,14 @@ class UserModel {
 }
 
 class UsersScreen extends StatelessWidget {
+
   UsersScreen({Key key}) : super(key: key);
+
+  List<UserModel> usrs = [
+
+
+  ];
+
 
   @override
   Widget build(BuildContext context) {
