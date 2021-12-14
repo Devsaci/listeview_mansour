@@ -128,7 +128,7 @@ class MessengerScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                  ),
+                  ), // Item Horizontal
                   SizedBox(width: 15.0),
                   Container(
                     width: 60,
@@ -380,7 +380,7 @@ class MessengerScreen extends StatelessWidget {
                           ),
                         ),
                       ],
-                    ),
+                    ), // Item Vertical
                     SizedBox(height: 20.0),
                     Row(
                       children: [
