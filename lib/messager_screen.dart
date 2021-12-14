@@ -85,7 +85,10 @@ class MessengerScreen extends StatelessWidget {
           ),
           SizedBox(height: 20.0),
           ListView.builder(
-            itemBuilder: (contextList, index){},
+            itemCount: 10,
+            itemBuilder: (contextList, index) {
+              return buildChatItem();
+            },
           ),
         ]),
       ),
