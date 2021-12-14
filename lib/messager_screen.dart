@@ -59,36 +59,35 @@ class MessengerScreen extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // Icon Serch , Txt Scherch
-            Container(
-              padding: EdgeInsets.all(5),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20.0),
-                color: Colors.grey[300],
-              ),
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.search,
-                    color: Colors.black,
-                    size: 50.0,
-                  ),
-                  SizedBox(
-                    width: 15,
-                  ),
-                  Text(
-                    "Search",
-                    style: TextStyle(fontSize: 20, color: Colors.black),
-                  ),
-                ],
-              ),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Container(
+            padding: EdgeInsets.all(5),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20.0),
+              color: Colors.grey[300],
             ),
-            SizedBox(height: 20.0),
-          ],
-        ),
+            child: Row(
+              children: [
+                Icon(
+                  Icons.search,
+                  color: Colors.black,
+                  size: 50.0,
+                ),
+                SizedBox(
+                  width: 15,
+                ),
+                Text(
+                  "Search",
+                  style: TextStyle(fontSize: 20, color: Colors.black),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 20.0),
+          ListView.builder(
+            itemBuilder: (BuildContext context, int index){},
+          ),
+        ]),
       ),
     );
   }
