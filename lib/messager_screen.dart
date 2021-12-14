@@ -84,10 +84,13 @@ class MessengerScreen extends StatelessWidget {
             ),
           ),
           SizedBox(height: 20.0),
-          ListView.builder(
-            itemCount: 10,
-            itemBuilder: (contextList, index) =>  buildChatItem(),
-
+          Container(
+            height: 100.0,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (contextList, index) =>  buildStoryItem(),
+              itemCount: 20,
+            ),
           ),
         ]),
       ),
@@ -215,7 +218,7 @@ class MessengerScreen extends StatelessWidget {
             ),
             SizedBox(height: 6.0),
             Text(
-              "SACI Zakaria SACI Zakaria",
+              "SACI Zakaria",
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 10,
